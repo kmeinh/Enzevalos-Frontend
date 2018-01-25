@@ -9,7 +9,22 @@ openpgp.config.aead_protect = true
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+
+	var query = req.query
+
+	if (!query.text) {
+		res.render('parameterless', { 
+  			title: 'Enzevalos',
+  			messageTitle: 'Seite nicht gefunden',
+  			additional: 'Versuche es nocheinmal mit dem Link aus der E-Mail'
+  		});
+
+  		return
+	}
+
+	let texts = query.text.split(',')
+	
+	res.render('index', {title: 'Entschlüsseln', texts: texts})
 });
 
 router.get('/decrypt', function(req, res, next) {
