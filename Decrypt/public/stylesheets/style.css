@@ -4,6 +4,17 @@
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.footer-container {
+	align-content: center;
+	text-align: center;
+}
+
 .password-container {
 	padding-top: 50px;
+}
+
+.icon.lg {
+    line-height: 100px;
+    font-size: 100px;
+    padding: 10px;
 }

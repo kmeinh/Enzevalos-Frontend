@@ -29,9 +29,19 @@ router.get('/', function(req, res, next) {
 
 router.get('/decrypt', function(req, res, next) {
 
+	//-----BEGIN PGP MESSAGE-----\n\nww0EBwMIT2tdgUK9LBfX0kEBrzkG4ELPGzfGVoNsD4l8W7X4IORgud5tkalTpVrL+hq7fKdwt53i\nyD2fmQjDt45JSAOKOBftAR6EmRCvuB048g==\n=ak/6\n-----END PGP MESSAGE-----\n
+	// 7505-3824
+
+	//ww0EBwMIZoDGErw5YU7X0kEBrk+dC7fFAgy2SyBa7tA9cw++khbA1FtzBsCLuyidc2LBJ/2fqqV7ak1kwBNpTv5AuYvAXgWv29EYw+pNwS5dGw==
+	//0661-4928
+
+	var message = openpgp.message.fromText("ww0EBwMIZoDGErw5YU7X0kEBrk+dC7fFAgy2SyBa7tA9cw++khbA1FtzBsCLuyidc2LBJ/2fqqV7ak1kwBNpTv5AuYvAXgWv29EYw+pNwS5dGw==")
+	var armor = message.armor()
+	console.log(armor)
+
 	var options = {
-	    message: openpgp.message.readArmored("-----BEGIN PGP MESSAGE-----\nVersion: ObjectivePGP\nComment: https://www.objectivepgp.com\nCharset: UTF-8\n\nww0EBwMIX4I1A0XO3KzX0nAB7/yDorOPhkRpwgEe7H6m3l0DJr0Gh3ikNGzTqKXucSSDQ+DRy1wH\nYhJJXb7U9aXejUVVupZvgJFJ9C8I5/P3j5oe1KFqW5ZzokWvz2NWF8v/GzVdiZ2wRvG/EX0yXlRh\n/Vz2cTjpC4mN5wRAPb2B\n=mZbf\n-----END PGP MESSAGE-----"),
-	    password: '6125-4985'
+	    message: openpgp.message.readArmored(armor),
+	    password: '0661-4928'
 	};
 
 	console.log(new TextDecoder("ascii").decode(options.message.packets.write()))
