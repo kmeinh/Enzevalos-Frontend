@@ -18,3 +18,17 @@
     font-size: 100px;
     padding: 10px;
 }
+
+.decrypt-info {
+	margin-top: 80px;
+}
+
+.decrypt-info-a {
+	color: white;
+}
+
+.decrypt-info-button {
+	background-color: #FF9800;
+	color: white;
+	padding: 10px;
+}

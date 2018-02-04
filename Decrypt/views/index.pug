@@ -7,8 +7,12 @@ block content
 			each item in texts
 				li= item
 		h4= 'Passwort'
-		div(class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label')
-			input(class='mdl-textfield__input', type='text', id='password')
-			label(class='mdl-textfield__label', for='password') Passwort eingeben
-		div(class='password-container')
-			button(class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored') Klartext anzeigen
+		form(method='POST', action= '/decrypt')
+			input(type='hidden', name='cipher', value= cipher)
+			input(type='hidden', name='texts', value= stored_texts)
+			div(class='mdl-textfield mdl-js-textfield mdl-textfield--floating-label ' + isInvalid)
+				input(class='mdl-textfield__input', type='text', id='password', name= 'password', value= password)
+				label(class='mdl-textfield__label', for='password') Passwort eingeben
+				span(class='mdl-textfield__error') Falsches Passwort
+			div(class='password-container')
+				button(class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored' type='submit') Klartext anzeigen
