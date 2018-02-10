@@ -31,4 +31,15 @@
 	background-color: #FF9800;
 	color: white;
 	padding: 10px;
+	font-size: 17px;
+}
+
+i {
+	margin-left: 12px;
+}
+
+body li{
+	color: #FF9800;
+	font-size: 19px;
+	font-family: 'Roboto Mono', monospace;
 }

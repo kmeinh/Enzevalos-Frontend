@@ -5,7 +5,10 @@ block content
 		h3= title
 		.ul
 			each item in texts
-				li= item
+				if texts.length > 1
+					li= item
+				else
+					li(style='list-style-type: none;') item
 		div(class= 'decrypt-info')
 			a(class= 'decrypt-info-a', href= 'http://userpage.fu-berlin.de/wieseoli/letterbox/')
 				div(class= 'decrypt-info-button') Selber Ausprobieren
