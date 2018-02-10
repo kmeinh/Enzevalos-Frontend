@@ -24,12 +24,12 @@
 }
 
 .decrypt-info-a {
-	color: white;
+	color: #FF9800;
 }
 
 .decrypt-info-button {
 	background-color: #FF9800;
-	color: white;
+	color: black;
 	padding: 10px;
 	font-size: 17px;
 }
