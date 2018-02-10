@@ -9,6 +9,6 @@ block content
 					li= item
 				else
 					li(style='list-style-type: none;') item
-		div(class= 'decrypt-info')
-			a(class= 'decrypt-info-a', href= 'http://userpage.fu-berlin.de/wieseoli/letterbox/')
-				div(class= 'decrypt-info-button') Selber Ausprobieren
+		form(action='http://userpage.fu-berlin.de/wieseoli/letterbox/')
+			div(class= 'decrypt-info')
+				button(class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored' type='submit') Selber Ausprobieren 
