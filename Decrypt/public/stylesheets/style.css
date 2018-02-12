@@ -23,12 +23,12 @@
 	margin-top: 80px;
 }
 
-.decrypt-info-a {
-	color: white;
+i {
+	margin-left: 12px;
 }
 
-.decrypt-info-button {
-	background-color: #FF9800;
-	color: white;
-	padding: 10px;
+body li{
+	color: #FF9800;
+	font-size: 19px;
+	font-family: 'Roboto Mono', monospace;
 }

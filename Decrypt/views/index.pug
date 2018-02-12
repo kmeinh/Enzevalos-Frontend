@@ -5,7 +5,10 @@ block content
 		h3= title
 		.ul
 			each item in texts
-				li= item
+				if texts.length > 1
+					li= item
+				else
+					li(style='list-style-type: none;')= item
 		h4= 'Code'
 		form(method='POST', action= '/decrypt')
 			input(type='hidden', name='cipher', value= cipher)
